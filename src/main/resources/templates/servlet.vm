@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Dolar</title>
+
+        <meta name="decorator" content="atl.general">
+
+    </head>
+    <body>
+        <h1>Dolar</h1>
+        <div>$dolar</div>
+    </body>
+</html>

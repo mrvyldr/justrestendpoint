@@ -24,7 +24,7 @@ public class MyRestResource {
     public Response getMessage()
     {
         try {
-            String url = "http://api.currencylayer.com/live?access_key=8a3825ea3ded1c0e06ff2cb5325c1884";
+            String url = "http://api.currencylayer.com/live?access_key=4d4b4583bdc3219f215ccda6e9cb5000";
             URL obj = new URL(url);
             HttpURLConnection con = (HttpURLConnection) obj.openConnection();
             int responseCode = con.getResponseCode();
@@ -40,7 +40,10 @@ public class MyRestResource {
             Gson g = new Gson();
             MyPojo p = g.fromJson(response.toString(), MyPojo.class);
 
-            return Response.ok(new MyRestResourceModel(p.getQuotes().getUSDTRY())).build();
+            MyRestResourceModel mrr = new MyRestResourceModel(p.getQuotes().getUSDTRY());
+
+
+            return Response.ok(mrr.getMessage()).build();
 
         } catch(Exception e) {
 
