@@ -21,4 +21,7 @@
   <rest name="My Rest Resource" i18n-name-key="my-rest-resource.name" key="my-rest-resource" path="/myrestresource" version="1.0"> 
     <description key="my-rest-resource.description">The My Rest Resource Plugin</description> 
   </rest>
+  <servlet name="MyServlet" class="com.veniture.plugins.tutorial.servlet.MyServlet" key="myservlet">
+    <url-pattern>/myservlet</url-pattern>
+  </servlet>
 </atlassian-plugin>
